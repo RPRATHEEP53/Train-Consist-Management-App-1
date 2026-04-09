@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * ======================================================
+ * MAIN CLASS - UseCase2TrainConsistMgmnt
+ * ======================================================
+ * Use Case 2: Add Passenger Bogies to Train
+ * * Description:
+ * This class demonstrates how passenger bogies can be
+ * managed dynamically using ArrayList operations.
+ */
+public class UseCase2TrainConsistMgmnt {
+
+    public static void main(String[] args) {
+
+        // 1. Display Header
+        System.out.println("============================================");
+        System.out.println(" UC2 - Add Passenger Bogies to Train ");
+        System.out.println("============================================\n");
+
+        // 2. Create an ArrayList to hold passenger bogies (Key Requirement)
+        List<String> passengerBogies = new ArrayList<>();
+
+        // 3. CREATE (Add bogies: Sleeper, AC Chair, First Class)
+        passengerBogies.add("Sleeper");
+        passengerBogies.add("AC Chair");
+        passengerBogies.add("First Class");
+
+        // 4. READ (Print list after insertion)
+        System.out.println("After Adding Bogies:");
+        System.out.println("Passenger Bogies : " + passengerBogies + "\n");
+
+        // 5. DELETE (Remove 'AC Chair')
+        passengerBogies.remove("AC Chair");
+        System.out.println("After Removing 'AC Chair':");
+        System.out.println("Passenger Bogies : " + passengerBogies + "\n");
+
+        // 6. SEARCH (Check if 'Sleeper' exists using contains)
+        System.out.println("Checking if 'Sleeper' exists:");
+        boolean hasSleeper = passengerBogies.contains("Sleeper");
+        System.out.println("Contains Sleeper? : " + hasSleeper + "\n");
+
+        // 7. Final State Display
+        System.out.println("Final Train Passenger Consist:");
+        System.out.println(passengerBogies + "\n");
+
+        System.out.println("UC2 operations completed successfully...");
+    }
+}
